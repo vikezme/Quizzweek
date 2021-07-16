@@ -60,11 +60,14 @@ let questions =[
 ]
 
 let question_count=0;
+let point=0;
 
 function next() {
   let user_answer = document.querySelector("li.option.active").innerHTML;
   if(user_answer == questions[question_count].answer){
     console.log("Correct");
+    points +=10;
+    sessionStorage.setItem("Points, point");
   }else {
     console.log("Wrong");
   }
@@ -83,10 +86,9 @@ function show(count) {
     <li class="option">${questions[count].options[3]}</li>
   </ul>`;
 
- document.getElementById("option-group").addEventListener("click",function())
+   toggleActive();
+  }
 
-    toggleActive();
-}
 
   document.getElementById('btn-next').addEventListener("click", next);
 
