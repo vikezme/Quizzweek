@@ -66,10 +66,11 @@ function next() {
   let user_answer = document.querySelector("li.option.active").innerHTML;
   if(user_answer == questions[question_count].answer){
     console.log("Correct");
-    points +=10;
-    sessionStorage.setItem("Points, point");
+    point +=10;
+
   }else {
     console.log("Wrong");
+
   }
   question_count++;
   show(question_count);
