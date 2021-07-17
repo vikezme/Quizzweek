@@ -123,7 +123,8 @@ let time = startingMinutes * 60;
 
 const countdownEl = document.getElementById('countdown');
 
-setInterval(updateCountdown, 1000);
+var timerCountdown= setInterval(updateCountdown, 1000);
+
 
 function updateCountdown() {
   const minutes = Math.floor(time / 60);
@@ -131,20 +132,4 @@ function updateCountdown() {
 
   countdownEl.innerHTML = `${minutes}:${seconds}`;
   time--;
-}
-var gameOver = function(game) {}
-gameOver.prototype = {
-    create: function() {
-        var style = {
-            font: "32px Monospace",
-            fill: "#00ff00",
-            align: "center"
-        }
-
-        var text = game.add.text(
-            game.width / 2, game.height / 2, "Game Over\n\nYour score: " + score + "\n\nTap to restart", style
-        );
-
-        text.anchor.set(0.5);
-    }
 }
