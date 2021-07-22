@@ -122,17 +122,14 @@ let time = startingMinutes * 60;
 const countdownEl = document.getElementById('countdown');
 
 var timerCountdown= setInterval(updateCountdown, 1000);
-if (time <= 0) {
-  clearInterval(timerCountdown);
-  function sendMessage() {
-  alert("Game Over");
-}
-}
 
 function updateCountdown() {
   const minutes = Math.floor(time / 60);
   let seconds = time % 60;
-
   countdownEl.innerHTML = `${minutes}:${seconds}`;
   time--;
+  if (time <= 0) {
+    clearInterval(timerCountdown);
+    alert("Game Over");
+  }
 }
