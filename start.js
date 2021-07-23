@@ -3,6 +3,7 @@ function submitForm (e) {
   let name= document.forms["welcome_form"]["name"].value;
   sessionStorage.setItem("name", name);
   console.log("form submitted");
-  //window.location.href = '/quiz.html';
-  location.replace("C:/Users/WAP/Desktop/Quizzweek/Quizzweek/quiz.html")
+
+  window.location.href = "quiz.html";
+  
 }
