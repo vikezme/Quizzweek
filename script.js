@@ -64,13 +64,19 @@ let point=0;
 
 function next() {
   let user_answer = document.querySelector("li.option.active").innerHTML;
+
+
   if(user_answer == questions[question_count].answer){
     console.log("Correct");
     point +=10;
-
+    sessionStorage.setItem("Points", point);
   }else {
     console.log("Wrong");
 
+  }
+  if(question_count == questions.length -1) {
+    location.href = "end.html";
+    return;
   }
   question_count++;
   show(question_count);
@@ -110,12 +116,7 @@ function toggleActive(){
 
 }
 
-function submitForm (e) {
-  e.preventDefault();
-  let name= document.forms["Welcome Form"]["name"].value;
-  sessionStorage.setItem("name", name);
-  console.log("form submitted");
-}
+
 const startingMinutes = 1;
 let time = startingMinutes * 60;
 

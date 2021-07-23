@@ -5,6 +5,7 @@
 }
 body{
   font-family: georgia;
+  background-color: lightgreen;
 }
 
 .wrapper{
@@ -134,4 +135,23 @@ h2{
 .active{
   background-color: blue;
   color: white;
+}
+.user_name,
+.user_points,
+.user_time {
+  color: black;
+  text-align: center;
+  margin-top: 15px;
+  font-size: 25px;
+  font-weight: bold;
+  font-family: georgia,arial;
+
+}
+.user_name{
+  margin-top: 250px;
+  text-decoration: underline;
+}
+.score{
+  background-color: yellow;
+
 }
